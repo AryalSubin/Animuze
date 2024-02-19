@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowUpLong } from "react-icons/fa6";
+import Image2 from "../assets/photo2.jpg";
 
 function Landing() {
   return (
@@ -9,7 +10,13 @@ function Landing() {
           return (
             <div key={id} className="masker flex ">
               {id === 1 && (
-                <div className="w-[9vw] rounded-md h-[4.79vw] relative mr-2 top-[.75vw] bg-red-500"></div>
+                <div className="w-[9vw] rounded-lg object-cover overflow-hidden h-[4.79vw] relative mr-2 top-[.75vw] bg-red-500">
+                  <img
+                    className="object-cover overflow-hidden "
+                    src={Image2}
+                    alt="img2"
+                  />
+                </div>
               )}
               <h1 className="uppercase tracking-tighter leading-[0.9] text-[7vw] font-bold font-poppins">
                 {text}

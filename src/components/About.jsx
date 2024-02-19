@@ -1,11 +1,12 @@
 import React from "react";
 import { FaArrowUpLong } from "react-icons/fa6";
+import Image from "../assets/photo1.jpg";
 
 const About = () => {
   return (
     <div className="bg-[#CDEA68]  ">
       <p className="text-[3.5vw] tracking-tight leading-none max-w-[85%] p-10 ">
-        Animuze is a strategic partner for fast-grow­ing tech businesses that
+        Animuze is a strategic partner for fast-growing tech businesses that
         need to raise funds, sell products, explain complex ideas, and hire
         great people.
       </p>
@@ -17,7 +18,7 @@ const About = () => {
           <div className="flex  flex-col gap-10">
             <p className="">
               We create tailored presentations to help you persuade your
-              colleagues, clients, or investors. Whether it’s live or digital,
+              colleagues, clients, or investors. Whether it's live or digital,
               delivered for one or a hundred people.
             </p>
             <p className="">
@@ -50,14 +51,20 @@ const About = () => {
             <p className="text-[4vw] pb-4 tracking-tight ">Our approach:</p>
             <div className="bg-black relative group flex justify-between items-center gap-8  px-8 py-4 rounded-full max-w-fit text-white   ">
               <p className="uppercase">Read More</p>
-              <div className="h-2 w-2 rounded-full bg-white group-hover:scale-[5] transition-[.4] "></div>
+              <div className="h-2 w-2 rounded-full bg-white group-hover:scale-[5] transition duration-500 "></div>
               <div className="absolute right-[28px] scale-0 rotate-45 transition duration-300 ease-in-out group-hover:scale-100 text-black ">
                 <FaArrowUpLong />
               </div>
             </div>
           </div>
           <div className="flex flex-1">
-            <div className=" rounded-xl flex h-[60vh] w-full bg-red-500"></div>
+            <div className=" rounded-xl group hover:scale-[.98] transition duration-1000 overflow-hidden   flex h-[60vh] w-full bg-red-500">
+              <img
+                className="w-full group-hover:scale-[1.05]  transition duration-1000  h-full overflow-hidden object-cover"
+                src={Image}
+                alt="lalal"
+              />
+            </div>
           </div>
         </div>
       </div>

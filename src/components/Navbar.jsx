@@ -1,4 +1,3 @@
-import { transform } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -35,7 +34,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex fixed top-0 left-0 w-full backdrop-blur-md transition duration-500 text-white shadow-sm bg-transparent text-md z-[999]  font-poppins p-2 justify-between ${
+      className={`flex fixed top-0 left-0 w-full backdrop-blur-md transition duration-500 text-white shadow-sm bg-transparent text-md z-[999]  font-poppins px-2 py-4 justify-between ${
         visible ? `` : ` -translate-y-[100%]`
       } `}
     >
