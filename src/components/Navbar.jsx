@@ -1,12 +1,53 @@
-import React from "react";
+import { transform } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [prevYPosition, setPreviousYPosition] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentYPosition = window.scrollY;
+
+      if (
+        prevYPosition > currentYPosition &&
+        prevYPosition - currentYPosition > 10
+      ) {
+        setVisible(true);
+      }
+      if (
+        currentYPosition > prevYPosition &&
+        currentYPosition - prevYPosition > 10
+      ) {
+        setVisible(false);
+      }
+      // if (currentYPosition < 100) {
+      //   setVisible(true);
+      // }
+      setPreviousYPosition(currentYPosition);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [visible, prevYPosition]);
+
   return (
-    <div className="flex fixed top-0 left-0 w-full text-gray-100 shadow-sm bg-transparent text-md  font-poppins p-2 justify-between ">
+    <div
+      className={`flex fixed top-0 left-0 w-full backdrop-blur-md transition duration-500 text-white shadow-sm bg-transparent text-md z-[999]  font-poppins p-2 justify-between ${
+        visible ? `` : ` -translate-y-[100%]`
+      } `}
+    >
       <div className="flex sm:flex-[.2] md:flex-[.5] lg:flex-[.7] xl:flex-1 items-center">
-        <span className="px-6   font-bold  ">Animuze</span>
+        <a
+          href="#"
+          className="px-6 cursor-pointer text-2xl text-[#EF4444]  font-bold  "
+        >
+          Animuze
+        </a>
       </div>
-      <div className="sm:flex hidden  font-light flex-1 capitalize p-1 gap-8">
+      <div className="sm:flex hidden font-medium flex-1 capitalize p-1 gap-8">
         {["services", "our work", "about us", "insights", "contact us"].map(
           (item, id) => {
             return id === 4 ? (

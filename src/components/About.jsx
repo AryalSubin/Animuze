@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowUpLong } from "react-icons/fa6";
 
 const About = () => {
   return (
@@ -43,7 +44,23 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="border-t-[1px] border-[#94a84d] p-10"></div>
+      <div className="border-t-[1px] border-[#94a84d] pb-20 px-10">
+        <div className="flex pt-4 ">
+          <div className="flex flex-1 flex-col">
+            <p className="text-[4vw] pb-4 tracking-tight ">Our approach:</p>
+            <div className="bg-black relative group flex justify-between items-center gap-8  px-8 py-4 rounded-full max-w-fit text-white   ">
+              <p className="uppercase">Read More</p>
+              <div className="h-2 w-2 rounded-full bg-white group-hover:scale-[5] transition-[.4] "></div>
+              <div className="absolute right-[28px] scale-0 rotate-45 transition duration-300 ease-in-out group-hover:scale-100 text-black ">
+                <FaArrowUpLong />
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-1">
+            <div className=" rounded-xl flex h-[60vh] w-full bg-red-500"></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

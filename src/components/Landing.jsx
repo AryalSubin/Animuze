@@ -26,11 +26,11 @@ function Landing() {
           <div className="uppercase cursor-pointer group  items-center gap-2 group-hover:bg-white group-hover:text-black transition duration-700 px-4 py-1 border-2 rounded-full border-white">
             <span>start the project</span>
           </div>
-          <div className="h-9 relative w-9 flex justify-center items-center rotate-45 border-white border-2  rounded-full  group-hover:text-black  ease-linear transition duration-700 ">
-            <div className="absolute">
+          <div className="h-9 relative w-9 flex  justify-center items-center rotate-45 border-white border-2  rounded-full  group-hover:text-black  ease-linear transition duration-700 ">
+            <div className="absolute z-[99]">
               <FaArrowUpLong />
             </div>
-            <div className="h-0 w-0 group-hover:h-full rounded-full transition duration-700  group-hover:w-full group-hover:bg-white "></div>
+            <div className="h-1 w-1 scale-0 group-hover:scale-[8.3] rounded-full transition duration-700 group-hover:text-black  group-hover:bg-white "></div>
           </div>
         </div>
       </div>

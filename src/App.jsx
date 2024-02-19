@@ -6,7 +6,7 @@ import About from "./components/About";
 
 function App() {
   return (
-    <div className="w-full min-h-screen bg-zinc-900  ">
+    <div className="w-full min-h-screen bg-zinc-900 scroll-smooth  ">
       <Navbar />
       <Landing />
       <Marquee />
