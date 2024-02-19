@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowUpLong } from "react-icons/fa6";
 
 function Landing() {
   return (
@@ -6,7 +7,10 @@ function Landing() {
       <div className="text-structure pt-52 px-20">
         {["we create", "eye-opening", " presentations"].map((text, id) => {
           return (
-            <div key={id} className="masker ">
+            <div key={id} className="masker flex ">
+              {id === 1 && (
+                <div className="w-[9vw] rounded-md h-[4.79vw] relative mr-2 top-[.75vw] bg-red-500"></div>
+              )}
               <h1 className="uppercase tracking-tighter leading-[0.9] text-[7vw] font-bold font-poppins">
                 {text}
               </h1>
@@ -18,9 +22,16 @@ function Landing() {
       <div className="flex justify-between font-bold px-8 py-4 ">
         <p>For public and private companies</p>
         <p>From the first pitch to IPO</p>
-        <div className="uppercase group flex items-center gap-2 hover:bg-white hover:text-black transition-[1] px-4 py-1 border-2 rounded-full border-white">
-          <span>start the project</span>
-          <div className="h-2 w-2 bg-white  rounded-full group-hover:bg-black group-hover:h-4 group-hover:w-4 transition-[.5] "></div>
+        <div className="flex group items-center justify-center gap-4">
+          <div className="uppercase cursor-pointer group  items-center gap-2 group-hover:bg-white group-hover:text-black transition duration-700 px-4 py-1 border-2 rounded-full border-white">
+            <span>start the project</span>
+          </div>
+          <div className="h-9 relative w-9 flex justify-center items-center rotate-45 border-white border-2  rounded-full  group-hover:text-black  ease-linear transition duration-700 ">
+            <div className="absolute">
+              <FaArrowUpLong />
+            </div>
+            <div className="h-0 w-0 group-hover:h-full rounded-full transition duration-700  group-hover:w-full group-hover:bg-white "></div>
+          </div>
         </div>
       </div>
     </div>
