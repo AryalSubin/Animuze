@@ -20,8 +20,10 @@ const Eyes = () => {
       let deltaY = centerY - y;
 
       //form moving black eye lid
-      const translateX = Math.cos((rotate * Math.PI) / 180) * 30; // Adjust 50 for desired distance
-      const translateY = Math.sin((rotate * Math.PI) / 180) * 30;
+      const translateX =
+        Math.cos((rotate * Math.PI) / 180) * (window.innerWidth / 100); // Adjust 50 for desired distance
+      const translateY =
+        Math.sin((rotate * Math.PI) / 180) * (window.innerWidth / 100);
       setMoveX(translateX);
       setMoveY(translateY);
 
@@ -33,21 +35,21 @@ const Eyes = () => {
   return (
     <div
       style={{ backgroundImage: `url(${Image4})` }}
-      className="h-screen bg-cover bg-top flex justify-center items-center overflow-hidden  w-full "
+      className="h-screen relative bg-cover bg-top z-0 flex justify-center items-center overflow-hidden   "
     >
-      <div className="flex h-[15vw] gap-10 ">
+      <div className="flex h-[15vw] absolute gap-10 ">
         <div className="w-[15vw] flex justify-center items-center h-full rounded-full bg-[#F4F4F4] ">
           <div
             style={{
               transform: `translate(${-moveX}px, ${-moveY}px)`,
             }}
-            className="w-2/3 flex  justify-center items-center h-2/3 bg-black rounded-full "
+            className=" flex  justify-center items-center w-[60%] h-[60%] bg-black rounded-full "
           >
             <div
               style={{ transform: `rotate(${rotate}deg)` }}
-              className=" line w-full  p-[1px] h-[2vw] "
+              className=" line w-full  p-[1px] h-[3vw] "
             >
-              <div className="w-[1.9vw] h-full rounded-full bg-[#F4F4F4]"></div>
+              <div className="w-[2.5vw] h-[2.5vw] rounded-full bg-[#F4F4F4]"></div>
             </div>
           </div>
         </div>
@@ -56,13 +58,13 @@ const Eyes = () => {
             style={{
               transform: `translate(${-moveX}px, ${-moveY}px)`,
             }}
-            className="w-2/3 flex justify-center items-center h-2/3 bg-black rounded-full "
+            className="w-[60%] h-[60%] flex justify-center items-center  bg-black rounded-full "
           >
             <div
               style={{ transform: `rotate(${rotate}deg)` }}
               className=" line w-full  p-[1px] h-[2vw] "
             >
-              <div className="w-[1.9vw] h-full rounded-full bg-[#F4F4F4]"></div>
+              <div className="w-[2.5vw] h-[2.5vw] rounded-full bg-[#F4F4F4]"></div>
             </div>
           </div>
         </div>
